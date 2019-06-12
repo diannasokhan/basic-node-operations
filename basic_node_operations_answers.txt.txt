@@ -1,0 +1,34 @@
+Exercises
+
+1. Run the commands 'sort', 'wc' and 'uniq' on the 'commands.js' file. Explain
+how they work and what the output was.
+
+	A: 'sort'returns the file sorted alphabetically by line. It was first sorted by 
+	leading blanks, so the lines with largest amount of leading blanks were sorted first and 
+	so on. 
+	'wc' prints newline, word and byte counts for a file. When I ran 'wc commands.js', I got
+	'35 66 897 commands.js'.
+	'uniq' removes duplicates of adjacent lines, leaving the first copy in the 
+	output only. Because there weren't any lines adjacent to eachother and duplicates the original file
+	was returned. 
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was 
+and why the specific data was outputted.
+
+	A: 'sort commands.js | uniq'. The file was sorted and because the 'break' lines were adjacent to eachother now,
+	the output only had one 'break' line instead of two. 
+
+3. Implement the head command in the commands.js file. The head command outputs the first n lines of a file (you may decide what n is). 
+This function will be similar to cat in structure so it will be helpful to reference.
+
+6. In this checkpoint, you encountered built-in JavaScript methods as well as the new ES6 syntax. Review the information below before attempting the programming challenge.
+
+function reverseString(inputString){
+  let reversed = []
+  let string = inputString.split(' ');
+  string.forEach(word =>{
+    reversed.push(word.split('').reverse().join(''));
+   })
+  return reversed.join(' ');
+}
+console.log(reverseString("I'm learning to program algorithms!"))
