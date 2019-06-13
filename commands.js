@@ -22,8 +22,10 @@ function evaluateCmd(userInput){
             break;
         case "tail":
             commandLibrary.tail(userInputArray.slice(1));
+            break;
         default:
-            console.log('Command not found')
+            console.log('Command not found');
+            process.stdout.write('\nprompt > ')
     }
 }
 
